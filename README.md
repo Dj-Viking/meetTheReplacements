@@ -17,6 +17,7 @@ Acting cast - Erin Cline
               Greg Coleman
               Stephen Pugh
               Devan Seaman
+              Adam Delmedico
 
 Set Piece Co-Designers - Nick Johnson
                          Michael Thibodeau
