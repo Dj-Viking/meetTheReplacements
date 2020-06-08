@@ -41,79 +41,74 @@ void setup() {
 
 void loop(){
 
-switch (selector){
+  switch (selector){
   
-  case 1: Twinkle(0xff, 0xff, 0xff, 10, 100, true);        //white 
-          break;
+    case 1: Twinkle(0xff, 0xff, 0xff, 10, 100, true);        //white 
+    break;
 
-  case 2: TwinkleRandom(20, 200, true);                     //random
-          break;
+    case 2: TwinkleRandom(20, 200, true);                     //random
+    break;
 
-  case 3: Twinkle(0xeb, 0x28, 0xa3, 10, 100, false);        //pink EB28A3
-          break;  
+    case 3: Twinkle(0xeb, 0x28, 0xa3, 10, 100, false);        //pink EB28A3
+    break;  
 
-  case 4: CylonBounce(0x12, 0xa1, 0x3d, 4, 10, 50);         //12A13D green
-          break; 
+    case 4: CylonBounce(0x12, 0xa1, 0x3d, 4, 10, 50);         //12A13D green
+    break; 
 
-  case 5: TwinkleRandom(20, 200, true);                     //random
-          break;
+    case 5: TwinkleRandom(20, 200, true);                     //random
+    break;
 
-  case 6: Twinkle(0xff, 0xb3, 0x19, 10, 100, false);        //ffb319 yellow
-          break;
+    case 6: Twinkle(0xff, 0xb3, 0x19, 10, 100, false);        //ffb319 yellow
+    break;
 
-  case 7: Twinkle(0xff, 0x00, 0x00, 10, 100, false);        //red
-          break;
+    case 7: Twinkle(0xff, 0x00, 0x00, 10, 100, false);        //red
+    break;
 
-  case 8: CylonBounce(0x12, 0xa1, 0x3d, 4, 50, 50);         //12A13D green & faster
-          break;
+    case 8: CylonBounce(0x12, 0xa1, 0x3d, 4, 50, 50);         //12A13D green & faster
+    break;
 
-  case 9: SnowSparkle(0xeb, 0x28, 0xa3, 20, 200);           //EB28A3
-          break;  
+    case 9: SnowSparkle(0xeb, 0x28, 0xa3, 20, 200);           //EB28A3
+    break;  
 
-  case 10: Twinkle(0x1a, 0x0b, 0x9e, 10, 100, false);       //1A0B9E dark blue
-          break;
+    case 10: Twinkle(0x1a, 0x0b, 0x9e, 10, 100, false);       //1A0B9E dark blue
+    break;
 
-  case 11: Twinkle(0x4e, 0xc8, 0xfc, 10, 100, false);       //4EC8FC light blue
-          break;
+    case 11: Twinkle(0x4e, 0xc8, 0xfc, 10, 100, false);       //4EC8FC light blue
+    break;
 
-  case 12: Twinkle(0x1a, 0x0b, 0x9e, 10, 100, false);       //1A0B9E dark blue
-          break;
+    case 12: Twinkle(0x1a, 0x0b, 0x9e, 10, 100, false);       //1A0B9E dark blue
+    break;
 
-  case 13: SnowSparkle(0xeb, 0x28, 0xa3, 20, 200);          //EB28A3 pink
-          break;
-          
-  case 14: Twinkle(0xfc, 0xe0, 0xc0, 10, 100, false);       //FCE0C0 amber
-          break;
+    case 13: SnowSparkle(0xeb, 0x28, 0xa3, 20, 200);          //EB28A3 pink
+    break;
+            
+    case 14: Twinkle(0xfc, 0xe0, 0xc0, 10, 100, false);       //FCE0C0 amber
+    break;
 
-  case 15: Twinkle(0xff, 0xff, 0xff, 10, 100, false);       //white
-          break;
-  
-  case 16: rainbowCycle(20);                                //rainbow
-          break;  
+    case 15: Twinkle(0xff, 0xff, 0xff, 10, 100, false);       //white
+    break;
+    
+    case 16: rainbowCycle(20);                                //rainbow
+    break;  
 
-  case 17: Twinkle(0xff, 0x00, 0x00, 10, 100, false);       //red
-          break;
+    case 17: Twinkle(0xff, 0x00, 0x00, 10, 100, false);       //red
+    break;
 
-  case 18: Twinkle(0xfc, 0xe0, 0xc0, 10, 100, false);       //FCE0C0 amber
-          break;
+    case 18: Twinkle(0xfc, 0xe0, 0xc0, 10, 100, false);       //FCE0C0 amber
+    break;
 
-  case 19: Twinkle(0x1a, 0x0b, 0x9e, 10, 100, false);       //1A0B9E dark blue
-          break;
+    case 19: Twinkle(0x1a, 0x0b, 0x9e, 10, 100, false);       //1A0B9E dark blue
+    break;
 
-  case 20: TwinkleRandom(20, 200, true);                    //random
-          break;
+    case 20: TwinkleRandom(20, 200, true);                    //random
+    break;
 
-  case 21: Strobe(0xff, 0xff, 0xff, 10, 50, 1000);          //strobe
-          break;
-   
-          
-  case 23: selector = 1;                                    //returns to case 1
-
-          break;
-
-}
-
-
+    case 21: Strobe(0xff, 0xff, 0xff, 10, 50, 1000);          //strobe
+    break;
+    
+    case 23: selector = 1;                                    //returns to case 1
+    break;
+  }
 }
 
 
@@ -128,8 +123,7 @@ void Strobe(byte red, byte green, byte blue, int StrobeCount, int FlashDelay, in
     showStrip();
     delay(FlashDelay);
   }
- 
- delay(EndPause);
+  delay(EndPause);
 }
 
  
@@ -162,10 +156,7 @@ void TwinkleRandom(int Count, int SpeedDelay, boolean OnlyOne) {
        setAll(0,0,0); 
      }
    }
-  
   delay(SpeedDelay);
-
-  
 }
 
 //END RANDOM COLOR TWINKLE
