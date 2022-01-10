@@ -1,9 +1,6 @@
 # Meet The Replacements 2018 Orlando Fringe Set Piece Code
 This was the code that programmed the arduino controlling the LEDs installed for the setpiece used in the theatre show during the 2018 Orlando Fringe show called Meet The Replacements.
 
-## Meet The Replacements facebook page:
-https://www.facebook.com/Meet-The-Replacements-Orlando-Fringe-2018-721674878220706/
-
 ## Meet the Replacements Orlando Weekly news article:
 https://www.orlandoweekly.com/Blogs/archives/2018/05/23/fringe-2018-review-sci-fi-satire-meet-the-replacements-asks-pertinent-questions-about-the-nature-of-family
 
