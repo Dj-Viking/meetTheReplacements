@@ -21,7 +21,7 @@ Set Piece Co-Designers - Nick Johnson
                          Anders Ackerman
 
 Co-Programmers - Samantha Donatelli
-                (Thank you Sam for sending the code over!! :D)
+                (Thank you Sam for sending the final edits of the code over!! :D)
                  Anders Ackerman
 
 Also a special thanks to all the Orlando Fringe staff and tech crew!!!
