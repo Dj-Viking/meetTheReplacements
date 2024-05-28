@@ -1,1 +1,0 @@
-This Schematic was Created with Fritzing.  You can dowload it here: http://www.fritzing.org
