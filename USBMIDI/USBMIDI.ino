@@ -1,5 +1,11 @@
 #include <usbmidi.h>
 
+/*
+  midi ctrl example
+  https://github.com/BlokasLabs/USBMIDI/blob/master/examples/midictrl/midictrl.ino
+* /
+
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(31250); //MIDI baudrate
