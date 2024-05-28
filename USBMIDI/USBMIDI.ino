@@ -1,25 +1,24 @@
 #include <usbmidi.h>
 
-/*
-  midi ctrl example
-  https://github.com/BlokasLabs/USBMIDI/blob/master/examples/midictrl/midictrl.ino
-* /
+// https://github.com/BlokasLabs/USBMIDI/blob/master/examples/midictrl/midictrl.ino
 
-
-void setup() {
+void setup()
+{
   // put your setup code here, to run once:
-  Serial.begin(31250); //MIDI baudrate
-
+  Serial.begin(31250); // MIDI baudrate
 }
 
-void loop() {
+void loop()
+{
   // put your main code here, to run repeatedly:
-  //Handle USB communication
+  // Handle USB communication
   USBMIDI.poll();
 
-  //Forward MIDI
-  while(USBMIDI.available()) Serial.write(USBMIDI.read());
+  // Forward MIDI
+  while (USBMIDI.available())
+    Serial.write(USBMIDI.read());
   Serial.flush();
-  while(Serial.available()) USBMIDI.write(Serial.read());
+  while (Serial.available())
+    USBMIDI.write(Serial.read());
   USBMIDI.flush();
 }
