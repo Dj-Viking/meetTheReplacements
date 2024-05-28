@@ -1,5 +1,5 @@
-#include <usbmidi.h>
-
+#include <MIDIUSB-1.0.5/src/MIDIUSB.h>
+#include <Arduino/Arduino.h>
 // https://github.com/BlokasLabs/USBMIDI/blob/master/examples/midictrl/midictrl.ino
 
 void setup()

@@ -8,12 +8,14 @@ auto strip = Adafruit_WS2801();
 
 void setup()
 {
-    strip.begin();
-    strip.show();
-    Serial.begin(9600);
+  // TODO: find out the clock pin on the actual board
+  strip.updatePins(6, 7);
+  strip.begin();
+  strip.show();
+  Serial.begin(9600);
 }
 
 void loop()
 {
-    Serial.print("NO FORMAT");
+  Serial.print("NO FORMAT");
 }
