@@ -63,21 +63,25 @@ void setup()
   clock_prescale_set(clock_div_1); // Enable 16 MHz on Trinket
 #endif
 
+
   strip.begin();
 
   // Update LED contents, to start they are all 'off'
   strip.show();
+
+  Serial.begin(9600);
 }
 
 void loop()
 {
+  Serial.print("draw\n");
   // Some example procedures showing how to display to the pixels
 
-  // colorWipe(Color(255, 0, 0), 50);
-  // colorWipe(Color(0, 255, 0), 50);
-  // colorWipe(Color(0, 0, 255), 50);
+  colorWipe(Color(0, 0, 255), 10);
+  colorWipe(Color(255, 0, 0), 20);
+  colorWipe(Color(0, 255, 0), 30);
 
-  rainbow(10);
+  rainbow(50);
 }
 
 void rainbow(uint8_t wait)
@@ -148,9 +152,9 @@ uint32_t Color(byte r, byte g, byte b)
 // The colours are a transition r - g -b - back to r
 uint32_t Wheel(byte WheelPos)
 {
-  if (WheelPos < 1)
+  if (WheelPos < 3)
   {
-    return Color(WheelPos * 3, 255 - WheelPos * 2, 0);
+    return Color(WheelPos * 3, 255 - WheelPos * 3, 0);
   }
   else if (WheelPos < 170)
   {
