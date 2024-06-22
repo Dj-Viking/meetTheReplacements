@@ -13,8 +13,8 @@ inter_handler()
   // status byte for program change on channel 2
   // 0x1100 <- status with kind
   // 0x0002 <- channel
-  status_byte = 0x11000010;
-  byte data_byte = 0x00101100;
+  status_byte = B11000010;
+  byte data_byte = B00101100;
 
   // maybe send 0xee ??? which is the status byte and the data_byte added together
   // unless you have to send status before data byte? 
