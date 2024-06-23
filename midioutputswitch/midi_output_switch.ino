@@ -6,7 +6,7 @@ int datapin = 6;
 // analog pin
 int analogpin = 5; // not sure yet
 
-byte status_byte = B00000000;
+byte status_byte = B11000010;
 byte data_byte = B00101100;
 
 void setup()
