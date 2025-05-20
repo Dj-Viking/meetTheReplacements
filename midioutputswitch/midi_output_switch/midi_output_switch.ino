@@ -35,7 +35,7 @@ void loop()
   // and then send the bytes down the data pin
   // hmmm
 
-  Serial.print("analog pin reading\n");
+  Serial.print("analog pin reading ...");
   Serial.print(analogRead(analogpin));
   
   // analog input is started with pulled high.
@@ -43,6 +43,8 @@ void loop()
   while (analogRead(analogpin) <= (21 + tolerance))
   {
     Serial.print("\nSEND THE MIDI NOWWWWWW\n");
+    Serial.print("analog pin reading ...");
+    Serial.print(analogRead(analogpin));
     Serial.print("\n");
     Serial.print("\n");
     digitalWrite(tx_pin, status_byte);
