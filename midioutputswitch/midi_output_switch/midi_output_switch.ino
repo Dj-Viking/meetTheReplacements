@@ -49,6 +49,7 @@ void loop()
     digitalWrite(tx_pin, data_byte);
     delay(1);
   }
+  digitalWrite(tx_pin, 0x0);
   Serial.print("\n");
   delay(100);
   Serial.print("\n");
