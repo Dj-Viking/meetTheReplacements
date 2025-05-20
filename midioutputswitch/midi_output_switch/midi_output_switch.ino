@@ -1,12 +1,17 @@
 #include "Arduino.h"
 #include "pins_arduino.h"
 
-int datapin = 6;
-
 // analog pin
 int analogpin = A0;
 
+int tolerance = 0.13;
+// MIDI output tx pin
+int highbit = HIGH;
+int tx_pin = 6;
+
+int start_bit = 0;
 byte status_byte = B11000010;
+int stop_bit = 1;
 byte data_byte = B00101100;
 
 void setup()
@@ -16,7 +21,7 @@ void setup()
   Serial.begin(31250); // MIDI baudrate
 
   // set up pins
-  pinMode(datapin, OUTPUT);
+  pinMode(tx_pin, OUTPUT);
   pinMode(analogpin, INPUT_PULLUP); // pulled high to start
 }
 
@@ -32,13 +37,16 @@ void loop()
 
   Serial.print("analog pin reading\n");
   Serial.print(analogRead(analogpin));
-  int tolerance = 0.13;
+  
   // analog input is started with pulled high.
   // the switch is pulling it low with 220ohm to ground
-  while(analogRead(analogpin) <= (21 + tolerance)) {
+  while (analogRead(analogpin) <= (21 + tolerance))
+  {
     Serial.print("\nSEND THE MIDI NOWWWWWW\n");
     Serial.print("\n");
     Serial.print("\n");
+    digitalWrite(tx_pin, status_byte);
+    digitalWrite(tx_pin, data_byte);
     delay(1);
   }
   Serial.print("\n");
@@ -47,8 +55,7 @@ void loop()
   Serial.print("===================\n");
   /**
    * if (readpin(analogpin) === HIGH) {
-   *     digitalWrite(datapin, status_byte);
-   *     digitalWrite(datapin, data_byte);
+
    * }
    */
 }
